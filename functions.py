@@ -8,7 +8,7 @@ supported_drivers['KML'] = 'rw'
 api_key = '5b3ce3597851110001cf62482b4eac78da7b4dd2af533430ff8b926f'
 
 
-def gerar_coord_aleat(quantidade, dados_geograficos):
+def gerar_coord_aleat(quantidade):
     """Abre o arquivo KML e gera coordenadas aleatórias dentros das regiões do arquivo"""
     dados_geograficos = gpd.read_file('data/doc.kml', driver='KML')
     coordenadas_aleatorias = []
