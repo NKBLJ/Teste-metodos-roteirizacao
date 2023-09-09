@@ -2,7 +2,7 @@ import geopandas as gpd
 import random
 from fiona.drvsupport import supported_drivers
 import requests
-from numba import jit
+
 
 supported_drivers['KML'] = 'rw'
 api_key = '5b3ce3597851110001cf62482b4eac78da7b4dd2af533430ff8b926f'
