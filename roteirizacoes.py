@@ -1,6 +1,12 @@
 import random
 import numpy as np
 import requests
+from python_tsp.exact import solve_tsp_dynamic_programming
+
+
+def rota_branch(distancias):
+    permutacao, distancia = solve_tsp_dynamic_programming(distancias)
+    return round(distancia)
 
 
 def rota_aleatoria(distancias):
@@ -15,6 +21,7 @@ def rota_aleatoria(distancias):
 
     distan = 0
     origem = caminho[0]
+    print(caminho)
 
     # Somando as distâncias entre os pontos
     for destino in caminho[1:]:
@@ -42,6 +49,7 @@ def rota_knn(distancias):
     # Calcula a distância desse caminho
     distan = 0
     origem = caminho[0]
+    print(caminho)
 
     # Somando as distâncias entre os pontos
     for destino in caminho[1:]:
