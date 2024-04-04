@@ -1,11 +1,22 @@
 import random
 import numpy as np
 import requests
-from python_tsp.exact import solve_tsp_dynamic_programming
+from python_tsp.exact import solve_tsp_dynamic_programming, solve_tsp_branch_and_bound
+from python_tsp.heuristics import solve_tsp_local_search, solve_tsp_lin_kernighan
 
 
-def rota_branch(distancias):
+def rota_prog_dinam(distancias):
     permutacao, distancia = solve_tsp_dynamic_programming(distancias)
+    return round(distancia)
+
+
+def rota_local_search(distancias):
+    permutacao, distancia = solve_tsp_local_search(distancias)
+    return round(distancia)
+
+
+def rota_lin(distancias):
+    permutacao, distancia = solve_tsp_lin_kernighan(distancias)
     return round(distancia)
 
 
