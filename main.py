@@ -11,7 +11,7 @@ coord_sede = (-5.069952794832667, -42.82680303516773)
 
 with open("dados.csv", 'a', newline='') as arquivo_csv:
     writer = csv.writer(arquivo_csv)
-    for i in range(60):
+    for i in range(3):
         coords = gerar_coord_aleat(20)
         distancias = np.array(matriz_dist([coord_sede]+coords))
         heurist = rota_heuristica([coord_sede] + coords)

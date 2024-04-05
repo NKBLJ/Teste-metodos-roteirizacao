@@ -43,4 +43,4 @@ def rota_prog_linear(distancias):
         for j in range(num_cities):
             if pulp.value(x[i][j]) == 1:
                 dist_total += distancias[i][j]
-    return dist_total
+    return round(dist_total)
