@@ -10,6 +10,11 @@ def rota_prog_dinam(distancias):
     return round(distancia)
 
 
+def rota_branch(distancias):
+    permutacao, distancia = solve_tsp_branch_and_bound(distancias)
+    return round(distancia)
+
+
 def rota_local_search(distancias):
     permutacao, distancia = solve_tsp_local_search(distancias)
     return round(distancia)
